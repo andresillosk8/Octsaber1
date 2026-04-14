@@ -1,0 +1,1028 @@
+/* =========================================
+   VARIABLES GLOBALES (AMBOS SETS)
+   ========================================= */
+:root {
+    /* Set 1 */
+    --morado: #1d0259;
+    --amarillo: #f2d025;
+    --blanco: #ffffff;
+    --fuente: 'Urbanist', sans-serif;
+
+    /* Set 2 - Manteniendo compatibilidad total */
+    --primary-color: #1d0259;
+    --secondary-color: #f2d025;
+    --hover-link-menu: #f2d025;
+}
+
+/* RESET UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente), Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+/* =========================================
+   HEADER Y NAVBAR - COMPARTIDO Y ORIGINAL
+   ========================================= */
+/* =========================================
+   HEADER Y NAVBAR - UNIFICADO PARA LAS 5 PÁGINAS
+   Reemplaza SOLO el bloque de la línea 34 a la 60 aprox.
+   ========================================= */
+
+.header-estatico {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+    background: #1d0259 !important;
+    /* Morado Octasaber */
+    height: 75px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.menu-principal {
+    width: 100% !important;
+}
+
+/* Logo a la izquierda */
+.navbar-brand {
+    margin-right: auto !important;
+    padding-left: 20px !important;
+}
+
+.logo-proyecto {
+    height: 45px !important;
+    width: auto !important;
+}
+
+/* CENTRADO TOTAL: Agrupa Links e Iconos (Como en la Foto 1) */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: center !important;
+        flex-basis: auto !important;
+    }
+
+    .opciones-menu-principal {
+        display: flex !important;
+        margin: 0 !important;
+        /* Quita el espacio que los separa */
+        padding: 0 !important;
+    }
+
+    .iconos-derecha {
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        margin-left: 30px !important;
+        /* Distancia corta entre menú e iconos */
+    }
+}
+
+.menu-principal .nav-link {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    padding: 0 12px !important;
+    transition: 0.3s !important;
+    white-space: nowrap !important;
+}
+
+.menu-principal .nav-link:hover {
+    color: #f2d027 !important;
+    /* Amarillo Octasaber */
+}
+
+/* Iconos de la derecha */
+.icono-nav {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+}
+
+.icono-accesibilidad {
+    background: #ffffff !important;
+    color: #1d0259 !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* =========================================
+   SECCIÓN PRINCIPAL (PÁGINA 1 - HOME)
+   ========================================= */
+.hero-content {
+    height: 100vh;
+    background: url('imagenes/IMG_8246.PNG') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.contenedor-principal {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.cuadro-texto-central {
+    background: rgba(242, 208, 37, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.cuadro-texto-central p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.destacado-morado {
+    color: var(--morado);
+    font-weight: bold;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.flecha-izq {
+    left: 50px;
+}
+
+.flecha-der {
+    right: 50px;
+}
+
+.seccion-bloques {
+    padding: 80px 0;
+    position: relative;
+}
+
+.container-custom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.bloque-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.bloque-titulo {
+    flex: 1;
+    text-align: right;
+    color: var(--morado);
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.bloque-cuadro {
+    flex: 2.5;
+    padding: 35px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bg-amarillo {
+    background: var(--amarillo);
+    color: black;
+}
+
+.bg-morado {
+    background: var(--morado);
+    color: var(--blanco);
+}
+
+.resaltado-amarillo {
+    color: var(--amarillo);
+    font-weight: bold;
+}
+
+.fondo-dual {
+    background-image: url("imagenes/Imagen patron 1.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.fondo-dual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.contenedor-equipo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.fila-equipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pulpo-card {
+    width: 200px;
+    height: 200px;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.pulpo-card:hover {
+    transform: scale(1.1);
+}
+
+.pulpo-card img {
+    width: 80%;
+    height: auto;
+}
+
+/* =========================================
+   SECCIÓN INTELIGENCIAS (PÁGINA 2)
+   ========================================= */
+.main-wrapper {
+    margin-top: 70px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5% 20px 5%;
+    color: var(--morado);
+}
+
+.brand h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 0.9;
+    font-weight: 300;
+}
+
+.brand .bold {
+    font-weight: 900;
+}
+
+.hero-section {
+    background-color: var(--morado);
+    color: white;
+    padding: 60px 5% 120px 5%;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.features-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+.wheel-viewport {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.interactive-wheel {
+    width: min(350px, 80vw);
+    height: min(350px, 80vw);
+    border-radius: 50%;
+    position: relative;
+    border: 8px solid white;
+    overflow: hidden;
+    background: white;
+    transition: transform 3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wheel-viewport:hover .interactive-wheel {
+    transform: rotate(1080deg);
+}
+
+.slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr);
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%);
+}
+
+.core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22%;
+    height: 22%;
+    background: white;
+    border-radius: 50%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.bottom-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    clip-path: ellipse(75% 100% at 50% 100%);
+}
+
+.bottom-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5%;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-block {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+#imagen-señor {
+    width: 150px;
+    height: auto;
+}
+
+.efecto-levantado {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.efecto-levantado:hover {
+    transform: translateY(-15px) scale(1.05);
+    filter: drop-shadow(0 15px 20px rgba(242, 208, 37, 0.6));
+}
+
+/* =========================================
+   SECCIÓN TIPS Y ANSIEDAD (CÓDIGO AGREGADO)
+   ========================================= */
+
+/* --- SECCIÓN WELCOME TIPS --- */
+.welcome-sectiontips {
+    background-image: url(imagenes/Sofia/logoimagenco.jpg);
+    padding: 80px 5%;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-bgtips {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    background: rgba(29, 2, 89, 0.1);
+    border-radius: 20px;
+}
+
+.char-boytps,
+.char-girltps {
+    position: absolute;
+    bottom: 0;
+    height: 250px;
+}
+
+.char-boytps {
+    left: 5%;
+}
+
+.char-girltps {
+    right: 5%;
+}
+
+.welcome-text-grouptps {
+    text-align: center;
+    z-index: 2;
+}
+
+.logo-tipss {
+    width: clamp(150px, 30vw, 250px);
+    animation: aparecer 1s ease-out;
+}
+
+.tips-subtitle {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- SECCIÓN ANSIEDAD --- */
+.seccion-ansiedadtps {
+    background-color: var(--secondary-color);
+    padding: 60px 5%;
+}
+
+.tips-banner {
+    background: white;
+    border: 8px solid var(--primary-color);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.octopus-img {
+    animation: float 3s ease-in-out infinite;
+}
+
+.banner-tagps {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner-tagps:hover {
+    background: #71d074;
+    transform: scale(1.1);
+}
+
+/* TARJETAS INFO TIPS */
+.info-cardtps {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.info-cardtps:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon-wrappertps {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.card-icon-wrappertps img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* --- SECCIÓN PREPARACIÓN --- */
+.seccion-preparacion3 {
+    background: #f8f9fa;
+}
+
+.titulo-preptps {
+    background: var(--secondary-color);
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* SECCIÓN FINAL */
+.seccion-final2 {
+    background: var(--primary-color);
+}
+
+.pulpo-boxtps img {
+    animation: float 2s infinite ease-in-out;
+}
+
+/* =========================================
+   ANIMACIONES UNIFICADAS
+   ========================================= */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* =========================================
+   RESPONSIVE FINAL (COMBINADO)
+   ========================================= */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--morado);
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .bloque-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloque-titulo {
+        text-align: center;
+    }
+
+    .pulpo-card {
+        width: 160px;
+        height: 160px;
+    }
+
+    .flecha {
+        display: none;
+    }
+
+    .grid-container {
+        text-align: center;
+    }
+
+    .features-list li {
+        text-align: left;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+    }
+
+    .avatar-box {
+        order: -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-sectiontips {
+        min-height: 300px;
+        padding: 40px 5%;
+    }
+
+    .tips-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   BLOQUE DEL SEGUNDO CSS (INTEGRACIÓN TOTAL)
+   ========================================= */
+:root {
+    --morado: #1d0259;
+    --amarillo: #f2d025;
+    --blanco: #ffffff;
+    --fuente: 'Urbanist', sans-serif;
+}
+
+body {
+    font-family: var(--fuente);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.main-content {
+    padding-top: 70px;
+}
+
+.header-estatico {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    background: var(--morado);
+    height: 70px;
+}
+
+.menu-principal {
+    height: 100%;
+}
+
+.menu-principal .nav-link {
+    color: var(--blanco) !important;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 10px 15px !important;
+}
+
+.menu-principal .nav-link:hover {
+    color: var(--amarillo) !important;
+}
+
+@media (min-width: 992px) {
+    .opciones-menu-principal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.navbar-brand {
+    margin-left: 20px !important;
+}
+
+.logo-proyecto {
+    height: 45px;
+    width: auto;
+    margin-right: 12px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.logo-proyecto:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+.iconos-derecha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.icono-nav {
+    color: var(--blanco);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icono-accesibilidad {
+    background: var(--blanco);
+    color: var(--morado);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    border-color: rgb(255, 255, 255) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--morado);
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+    }
+}
+
+.simulacros-header {
+    background: var(--morado);
+    padding: 40px 0;
+}
+
+.titulo-simulacros {
+    font-weight: 800;
+    color: var(--blanco);
+}
+
+.letra-s {
+    color: var(--amarillo);
+    font-size: 50px;
+}
+
+.icono-acceso {
+    font-size: 30px;
+    color: var(--blanco);
+}
+
+.btn-morado {
+    background-color: var(--morado);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.btn-morado:hover {
+    background-color: #3b107a;
+    color: var(--amarillo);
+}
+
+.pulpo-card {
+    width: 200px;
+    height: 200px;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.pulpo-card:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .pulpo-card {
+        width: 160px;
+        height: 160px;
+    }
+
+    .titulo-simulacros {
+        font-size: 24px;
+    }
+}
+
+/* =========================================
+   ARQUITECTURA DE PRECISIÓN (SOLUCIÓN MENÚ)
+   ========================================= */
+
+/* Forzar centrado absoluto del contenedor del menú */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: center !important;
+        /* Centra el bloque de navegación */
+        flex-basis: auto;
+    }
+
+    .opciones-menu-principal {
+        display: flex !important;
+        justify-content: center !important;
+        /* Centra los links dentro del bloque */
+        margin: 0 auto !important;
+        /* Asegura el centrado en el eje horizontal */
+        padding: 0;
+        width: auto;
+    }
+
+    /* Asegurar que la marca y los iconos de los extremos no empujen el menú */
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Corrección de alineación para los íconos de la derecha */
+.iconos-derecha {
+    margin-left: auto;
+    /* Empuja los iconos al final */
+}
+
+/* Garantizar que el logo no empuje el menú hacia la derecha */
+.navbar-brand {
+    margin-right: auto;
+    /* Empuja el menú hacia el centro */
+}
+
+/* Estabilización de accesibilidad para evitar desbordamiento */
+.icono-accesibilidad,
+.icono-accesibilidad-nav {
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* VARIABLES NECESARIAS */
+:root {
+    --morado: #1d0259;
+    --amarillo: #f2d025;
+    --blanco: #ffffff;
+    --fuente: 'Urbanist', sans-serif;
+}
+
+/* ESTILOS DEL HEADER */
+.header-estatico {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    background: var(--morado);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-principal .nav-link {
+    color: var(--blanco) !important;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 10px 15px !important;
+}
+
+.menu-principal .nav-link:hover {
+    color: var(--amarillo) !important;
+}
+
+/* Logo y animaciones */
+.logo-proyecto {
+    height: 45px;
+    width: auto;
+    margin-right: 12px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.logo-proyecto:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+/* Iconos y Accesibilidad */
+.iconos-derecha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.icono-nav {
+    color: var(--blanco);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icono-accesibilidad {
+    background: var(--blanco);
+    color: var(--morado);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--morado);
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+    }
+}
+
+/* FRANJA GRIS */
+.franja-frase {
+    background: linear-gradient(90deg, #d9d9d9, #bfbfbf);
+    padding: 30px;
+    font-size: 22px;
+}
+
+/* SECCIÓN AMARILLA */
+.material-estudio {
+    background: #f4c400;
+    padding: 50px 0;
+}
+
+.titulo-material {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+/* ICONOS / PERSONAJES */
+.material-estudio img {
+    max-width: 120px;
+}
+
+.material-estudio p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* SECCIÓN FINAL */
+.seccion-final {
+    background: #eeeeee;
+    padding: 60px 0;
+}
+
+.imagen-final {
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+/* FRASE TIPO CAPSULA */
+.frase-final {
+    background: #cfc8d8;
+    padding: 20px 40px;
+    border-radius: 40px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* EVITA QUE EL HEADER TAPE TODO */
+.espacio-header {
+    height: 80px;
+}
+
+/* MEJORA TEXTO FRANJA */
+.franja-frase p {
+    margin: 0;
+    font-family: var(--fuente);
+}
+
+/* RESPONSIVE MÁS LIMPIO */
+@media (max-width: 768px) {
+    .titulo-material {
+        font-size: 28px;
+    }
+
+    .franja-frase {
+        font-size: 18px;
+        text-align: center;
+    }
+}
